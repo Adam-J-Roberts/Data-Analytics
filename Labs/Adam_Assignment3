@@ -1,0 +1,118 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 87,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "class Student(object):\n",
+    "    \n",
+    "    def __init__(self, name, scores):\n",
+    "        self.name = name\n",
+    "        self.scores = scores\n",
+    "        self.grades = [0]*scores\n",
+    "        \n",
+    "    def getName(self):\n",
+    "        return self.name\n",
+    "        \n",
+    "    def setName(self, name):\n",
+    "        self.name = name\n",
+    "        \n",
+    "    def getScores(self):\n",
+    "        return self.scores\n",
+    "    \n",
+    "    def setScores(self, scores):\n",
+    "        self.scores = scores\n",
+    "    \n",
+    "    def editGrade(self, position, grade):\n",
+    "        self.grades[position] = grade\n",
+    "    \n",
+    "    def getGrade(self, position):\n",
+    "        return self.grades[position]\n",
+    "    \n",
+    "    def resetGrade(self, position):\n",
+    "        self.grades[position] = 0\n",
+    "        \n",
+    "    def highestScore(self):\n",
+    "        return max(self.grades)\n",
+    "    \n",
+    "    def averageScore(self):\n",
+    "        return sum(self.grades) / len(self.grades) \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 88,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "first = Student(\"Adam\",3)\n",
+    "first.setName(\"Jim\")\n",
+    "first.editGrade(1,97)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 89,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Jim\n",
+      "3\n",
+      "97\n",
+      "97\n",
+      "32.333333333333336\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(first.getName())\n",
+    "print(first.getScores())\n",
+    "print(first.getGrade(1))\n",
+    "print(first.highestScore())\n",
+    "print(first.averageScore())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
